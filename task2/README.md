@@ -22,4 +22,4 @@ The server runs on the local loopback address and port 1234. The port can be cha
 ```
 #define PORT 1234
 ```
-in main.c
+in main.cpp
