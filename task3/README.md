@@ -16,6 +16,8 @@ make
 ## Output
 
 The application prints sent and received messages + data which it is using e.g. latitude and longitude. 
+
+Final part of output:
 ```
 Sunrise and sunset: 
 2022-05-09T01:45:14+00:00
