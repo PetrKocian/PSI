@@ -11,10 +11,10 @@ To build and run the application cmake is needed. Following commands build and r
 cmake .
 make
 ./psi3
+```
 
 ## Output
 
-```
 The application prints sent and received messages + data which it is using e.g. latitude and longitude. 
 ```
 Sunrise and sunset: 
@@ -27,7 +27,7 @@ The ISS is on the DARK side of the Earth
 ```
 ## API
 
-The application uses these APIs to get the information about the ISS and sunset/sunrise times
+The application uses these APIs to get the information about the ISS and sunset/sunrise times:
 
 ISS Now API:
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
