@@ -6,7 +6,7 @@ A simple REST client which checks the location of the ISS and reports whether it
 
 ## Build and run
 
-To build and run the application cmake is needed. Following commands build and run the server app.
+To build and run the application cmake is needed. Following commands build and run the application.
 ```
 cmake .
 make
