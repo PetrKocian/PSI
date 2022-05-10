@@ -188,11 +188,11 @@ int main() {
         //Check if ISS is observable sunset/sunrise +-90 minutes
         if(ct < (sr - 5400) && ct > (ss + 5400))
         {
-            std::cout << "Space station is observable";
+            std::cout << "Space station is observable\n";
         }
         else
         {
-            std::cout << "Space station is NOT observable";
+            std::cout << "Space station is NOT observable\n";
         }
     }
     else
@@ -210,11 +210,11 @@ int main() {
         //Check if ISS is observable sunset/sunrise +-90 minutes
         if(current_time > (sunrise - 5400) && current_time < (sunset + 5400))
         {
-            std::cout << "Space station is NOT observable";
+            std::cout << "Space station is NOT observable\n";
         }
         else
         {
-            std::cout << "Space station is observable";
+            std::cout << "Space station is observable\n";
         }
     }
 }
