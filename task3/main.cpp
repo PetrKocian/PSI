@@ -166,23 +166,55 @@ int main() {
 
     std::cout << "\n" << "Current time:\n" << curr << "\n";
 
-    //Check if it's after sunset/before sunrise -> dark side, otherwise light
-    if(current_time < (sunrise) || current_time > (sunset))
-    {
-        std::cout << "The ISS is on the DARK side of the Earth\n";
-    }
-    else
-    {
-        std::cout << "The ISS is on the LIGHT side of the Earth\n";
-    }
+    int sr, ss, ct;
+    sr = sunrise % 86400;
+    ss = sunset % 86400;
+    ct = current_time % 86400;
 
-    //Check if ISS is observable sunset/sunrise +-90 minutes
-    if(current_time < (sunrise - 5400) || current_time > (sunset + 5400))
+    //If the current time is bigger than both sunset and sunrise, and sunrise is later than sunset -> work with H:M:S only (modulo day)
+    if(current_time > sunrise && current_time > sunset && sr > ss)
     {
-        std::cout << "Space station is observable";
+
+        //Check if it's after sunset/before sunrise -> dark side, otherwise light
+        if(ct < (sr) && ct > (ss))
+        {
+            std::cout << "The ISS is on the DARK side of the Earth\n";
+        }
+        else
+        {
+            std::cout << "The ISS is on the LIGHT side of the Earth\n";
+        }
+
+        //Check if ISS is observable sunset/sunrise +-90 minutes
+        if(ct < (sr - 5400) && ct > (ss + 5400))
+        {
+            std::cout << "Space station is observable";
+        }
+        else
+        {
+            std::cout << "Space station is NOT observable";
+        }
     }
     else
     {
-        std::cout << "Space station is NOT observable";
+        //Check if it's after sunset/before sunrise -> dark side, otherwise light
+        if(current_time > sunrise && current_time < sunset)
+        {
+            std::cout << "The ISS is on the LIGHT side of the Earth\n";
+        }
+        else
+        {
+            std::cout << "The ISS is on the DARK side of the Earth\n";
+        }
+
+        //Check if ISS is observable sunset/sunrise +-90 minutes
+        if(current_time > (sunrise - 5400) && current_time < (sunset + 5400))
+        {
+            std::cout << "Space station is NOT observable";
+        }
+        else
+        {
+            std::cout << "Space station is observable";
+        }
     }
 }
