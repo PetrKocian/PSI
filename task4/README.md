@@ -14,3 +14,7 @@ To run the project https://www.gns3.com/ is needed.
 ## Results
 
 Here are pictures of PCs 1 and 2 accessing the Internet:
+
+![pc1](img/pc1.PNG)
+
+![pc2](img/pc2.PNG)
